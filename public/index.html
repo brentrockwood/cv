@@ -2,7 +2,6 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Brent Rockwood - Resume</title>
-	<style type="text/css">
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -18,26 +17,41 @@
 	  })();
 
 	</script>
+	<style type="text/css">
 body {
-  margin: 40px 80px 80px 80px;
-  font-family: Georgia, serif;
-  background: #f8f8f8;
+  margin: 2em 2em 2em 2em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .job ul {
   margin-top: 10px;
 }
-.techArea ul {
+
+table#tech {
+	margin-left: 2em;
 	margin-top: 0;
 }
+
+table#tech td {
+	width: 40%;
+}
+
+h4 {
+	margin: 0 0 0 0;
+}
+
+td {
+	margin: 1em 1em 1em 1em;
+}
+
 .name {
   font-size: 200%;
   font-family: Arial, sans-serif;
   font-weight: bold;
 }
 table {
-  background: #e8e8e8;
-  margin-top: 30px;
+  margin-bottom: 2em;
 	clear: both;
+	border-spacing: 1em;
 }
 td {
 	vertical-align: top;
@@ -53,7 +67,7 @@ td {
 }
 p {
   margin-top: 2px;
-  margin-bottom: 2px;
+  margin-bottom: 1em;
 }
 .employer {
   font-size: 120%;
@@ -70,9 +84,9 @@ p {
 </head>
 <body>
 	<div class="address">
-		205-5230 Tobin St.<br />
-		Halifax, Nova Scotia, B3H 1S2<br />
-		brent@brentrockwood.com<br />
+		205-5230 Tobin St.<br/>
+		Halifax, Nova Scotia, B3H 1S2<br/>
+		brent@brentrockwood.com<br/>
 		+1 902.449.7845
 		</div>
 		<div class="name">
@@ -112,58 +126,59 @@ p {
 				<ul>
 					<li>
 						<p>
-							For two years, member of the <a href="http://www.quest.com/quest-one-identity-manager/">Quest One Identity Manager</a> team.  This position required collaboration with dozens of developers around the world. I specialized in Software Development Lifecycle processes, integrating our <a href="http://www.quest.com/identity-manager-data-governance/">Data Governance</a> and Classification components into the larger product.
+							<a href="http://www.quest.com/quest-one-identity-manager/">Quest One Identity Manager - Data Governance Edition</a>
+</p><p>
+							I worked on this product team for two years.  Our team in Halifax ranged from ten to twenty developers and testers, collaborating with similar sized teams in Germany, Russia, China, and across the US.  Our team was primarily focused on filesystem and SharePoint security, as well as categorization and classification of untyped filesystem data (documents).  Our components alone comprised over a million lines of code and one hundred code projects.  Every developer on the team was required to understand and own all of the code we produced.
+						</p><p>
+							All work items were tracked using Microsoft Team Foundation Server (TFS), and we operated in two week sprints, culminating in biweekly demos which were viewed by stakeholders around the world.
+						</p><p>
+							All check-ins to TFS source control were subject to mandatory code review and continuously integrated using MSBuild and Team Build.
+						</p><p>
+							Unit tests used MSTest.  Integration testing used SpecFlow and custom PowerShell scripts.  Performance testing also used PowerShell and custom tools to collect and publish performance counters.  All results of testing were continuously published to all stakeholders.
+						</p><p>
+							The core Windows service component was built using C#.  Communication with other components was primarily via Windows Communications Foundation and REST interfaces.  Highlights of the service included a custom threading module for handling job execution with more control than the Microsoft-provided thread pool.  The data layer of the service supported both MS SQL Server and Oracle.
+						</p><p>
+							User interfaces were built using Windows Forms, and for the web, ASP.Net, HTML5 and jQuery.  All user interfaces were fully internationalized for translation into multiple end-user languages.  PowerShell commandlets were also provided and documented for end-user scripting.
+						</p><p>
+							Security scanning agent processes were installed on target machines via a custom remote executor.  The agent itself was comprised of a C++ core, with a COM plugin architecture for data scanners.  The scanners included out of the box could scan NTFS filesystems and SharePoint for security data.  In addition, the agent could receive change events from both sources.  In the case of SharePoint, this used a combination of the SharePoint event API, and custom code which was designed by reverse engineering the SharePoint database itself.  In the case of the filesystem, this used a custom Windows kernel driver, written in C++, and validated by Microsoft.  The agent also used an SQLite database for local storage.
+						</p><p>
+							Agents were also able to tokenize and push filesystem and SharePoint data to classification services which would read the unstructured data and make a determination if it contained Personally Identifiable Information (PII), Protected Health Information (PHI), or Payment Card Industry (PCI) data.
+						</p><p>
+							All Windows installers were built using the Windows Installer XML (WiX) framework.
+</p></li>
+<li><p>
+							<a href="http://www.quest.com/collaboration-services/">Quest Collaboration Services</a>
+						</p><p>
+							I worked on this product team for one year.  I took over this product as technical lead after a previous team had difficulty maintaining it at the required minimum service level.  The product was designed to synchronize contact and calendar data between Microsoft Exchange servers without any security changes or trusts required between the participating organizations, as in a large contracting situation, for example.  Synchronization was entirely via encrypted email.
+						</p><p>
+							The product had been built in Russia by a team that no longer existed.  Due to a problem during a code migration before I received the product, all comments and documentation were lost from the code, which weighed in at about 150,000 significant lines.  In addition, the product, written entirely in C++, used undocumented and unsupported MAPI interfaces to communicate with Exchange.
+						</p><p>
+							Working with one other developer and two testers, we were able to release versions extending support for Exchange 2010, along with numerous bug-fix releases.  In addition, we provided 24-7 support to all customers around the world.
+						</p><p>
+							Practices and processes were broadly similar to those listed above, with the notable exception of testing, as it was not deemed economically feasible to build a full automated test suite for the legacy code.
 						</p>
 					</li>
 					<li>
 						<p>
-							For one year, lead of a 2 developer team that built <a href="http://www.quest.com/collaboration-services/">Quest Collaboration Services</a>, a tool for synchronizing
-							user accounts, mailboxes, and calendar data between Microsoft Exchange servers in  large disparate organizations.
+							<a href="http://www.quest.com/access-manager/">Quest Access Manager</a>
+</p><p>
+							I worked on this product team for one year.  Access Manager was the predecessor to the Data Governance product listed above.  Many of the components were reused by the later product.  Access Manager did not contain the SharePoint or data classification components, and was a standalone product with a user interface built into Microsoft Management console (MMC).
 						</p>
 					</li>
 					<li>
 						<p>
-						 For one year, member of a 6 developer team that built <a href="http://www.quest.com/access-manager/">Quest Access Manager</a>, a Windows access control auditing and
-						 management tool.
+							Quest Group Policy Manager
+</p><p>
+							I worked on this product team for two years.  Group Policy Manager was the predecessor to a product now known as <a href="http://www.quest.com/gpoadmin/">Quest GPOAdmin</a>.  Starting from scratch, and with significant competition in the marketplace, we built it into the world's leading third-party Group Policy management tool.  It was primarily a Group Policy version control tool, offering policy comparison, workflow, and deployment features.  The team was comprised of four developers and one tester.
+						</p><p>
+							A client-server design, most code was written in C#, with some C++ for policy setting injection.  We heavily leveraged the API's provided by Microsoft with their Group Policy Management Console.  For functionality that could not be provided by the public API's, we reverse engineered the GPO structures in Active Directory.
+						</p><p>
+							The user interface was presented as an MMC snap-in, with HTML used for reporting purposes.  All UI was translated into French, German, and Japanese.  The client communicated via .Net Remoting to a Windows service.  The service, in turn, used a data layer that supported filesystem storage, SQL Server, or Active Directory itself.
+						</p><p>
+							This project predated common use of Scrum, Agile, and related methodologies.  As a result, it was managed much more informally.  However, we did use continuous integration and constant code review to help maintain schedules and quality.
 						</p>
 					</li>
-					<li>
-						<p>
-							For four years, member of a 4 developer team that built Quest Group Policy Manager (now <a href="http://www.quest.com/gpoadmin/">GPOADmin</a>),
-							a Windows Group Policy version control and workflow tool.
-						</p>
-					</li>
-					<li>
-						<p>
-							Products released on-time every time, resulting in tens of millions of dollars in revenue.
-						</p>
-					</li>
-					<li>
-						<p>Specialized in web technologies, automated build and test, and installation.</p>
-					</li>
-					<li>
-						<p>
-							Worked in a scrum style, with short sprints.
-						</p>
-					</li>
-					<li>
-						<p>
-							Built Windows services, thick and thin client UI's, web interfaces, scripting API's, and installers.
-						</p>
-					</li>
-					<li>
-						<p>
-							Internationalized products for translation into four languages, including non-Latin
-							alphabets (Japanese).</p>
-					</li>
-					<li>
-						<p>
-							Published API's for interoperation with other Quest products.</p>
-					</li>
-					<li>
-						<p>
-							Handled support cases when escalated from support division, including covering 24-hour support escalations when required.</p>
-					</li>
+
 				</ul>
 			</td>
 		</tr>
@@ -178,14 +193,14 @@ p {
 					<li>
 						<p>
 							Provided performance analysis and troubleshooting on a large web-based CRM system
-							for a regional telecom provider.</p>
+							for a regional telecom provider.  This work was primarily comprised of analyzing the threading code while in production and modifying DCOM settings to avoid thread starvation under heavy customer load.  Code was written in VB.Net and stored in Visual SourceSafe.</p>
 					</li>
 					<li>
 						<p>
 							Subcontracted to a GIS software developer where I delivered a land-management/permitting
 							application for a small city.  Project had been troubled, with over three years history of
-							non-delivery.  Starting largely from scratch, I was able to complete the project within
-							three months.</p>
+							non-delivery.  Working alone, and starting largely from scratch, I was able to complete the project within
+							three months.  All code was written in a language proprietary to the client which I had never seen before.  Tooling consisted of a text editor and StarTeam for source control.</p>
 					</li>
 				</ul>
 			</td>
@@ -231,6 +246,8 @@ p {
 						<p>
 							Built proof-of-concept for RSS news aggregation product.</p>
 					</li>
+					<li>
+						<p>All code was written in VB6 with SQL Server back ends, and stored in Visual SourceSafe.</p>
 				</ul>
 			</td>
 		</tr>
@@ -250,6 +267,9 @@ p {
 					<li>
 						<p>
 							Developed reporting software for reporting trial safety and efficacy.</p>
+					</li>
+					<li>
+						Early projects used Microsoft Access/VBA.  Later we migrated to ASP/VB6/Oracle.
 					</li>
 					<li>
 						<p>
@@ -278,17 +298,15 @@ p {
 				</ul>
 			</td>
 		</tr>
+	</table>
+	<div class="section">
+		Major Technology Experience</div>
+	<table id="tech">
 		<tr>
-			<td colspan="2">
-				<div class="section">
-					Major Technology Experience</div>
-			</td>
-		</tr>
-		<tr class="techArea">
-		  <td>
-				Languages
+		  <h4>
 		  </td>
 			<td>
+				<h4>Languages</h4>
 				<ul>
 					<li>C#</li>
 					<li>C/C++</li>
@@ -301,14 +319,13 @@ p {
 					<li>Windows Installer XML (WiX)</li>
 				</ul>
 			</td>
-		</tr>
-		<tr class="techArea">
 			<td>
-				Web Frameworks and Techniques
-			</td>
-			<td>
+				<h4>
+					Web Frameworks and Techniques
+				</h4>
 				<ul>
 					<li>HTML 5</li>
+					<li>jQuery</li>
 					<li>Rails</li>
 					<li>Sinatra</li>
 					<li>Node.js</li>
@@ -324,11 +341,11 @@ p {
 				</ul>
 			</td>
 		</tr>
-		<tr class="techArea">
+		<tr>
 			<td>
-				Databases and Data Layers
-			</td>
-			<td>
+				<h4>
+					Databases and Data Layers
+				</h4>
 				<ul>
 					<li>SQL Server</li>
 					<li>Oracle</li>
@@ -345,12 +362,10 @@ p {
 					<li>Node.js mongo-native</li>
 				</ul>
 			</td>
-		</tr>
-		<tr class="techArea">
 			<td>
-				Source Control Systems
-			</td>
-			<td>
+				<h4>
+					Source Control Systems
+				</h4>
 				<ul>
 					<li>Team Foundation Server</li>
 					<li>Git</li>
@@ -360,11 +375,11 @@ p {
 				</ul>
 			</td>
 		</tr>
-		<tr class="techArea">
+		<tr>
 			<td>
-				Build and Continuous Integration
-			</td>
-			<td>
+				<h4>
+					Build and Continuous Integration
+				</h4>
 				<ul>
 					<li>Team Build/MSBuild</li>
 					<li>CruiseControl.Net</li>
@@ -373,12 +388,10 @@ p {
 					<li>Cake</li>
 				</ul>
 			</td>
-		</tr>
-		<tr class="techArea">
 			<td>
-				Test frameworks
-			</td>
-			<td>
+				<h4>
+					Test frameworks
+				</h4>
 				<ul>
 					<li>MSTest</li>
 					<li>SpecFlow</li>
@@ -389,9 +402,9 @@ p {
 				</ul>
 			</td>
 		</tr>
-		<tr class="techArea">
-			<td>Additional API's</td>
+		<tr>
 			<td>
+				<h4>Additional API's</h4>
 				<ul>
 					<li>LDAP/ADSI</li>
 					<li>COM/DCOM</li>
@@ -400,7 +413,6 @@ p {
 			</td>
 		</tr>
 		<tr>
-			<td></td>
 			<td>...and many more...</td>
 		</tr>
 		<tr>
