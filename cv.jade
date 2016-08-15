@@ -2,71 +2,108 @@ html
   head
     title Resumé of Brent Rockwood
     link(rel='stylesheet', type='text/css', href='styles.css')
+    script(src="https://use.fontawesome.com/5eacc9f251.js")
   body
     header
       h1 Brent Rockwood
-      h2 2814 Preston Lake Drive, Tucker, GA, 30084
-      h2 brent@brentrockwood.com
-      h2 +1 404 960 2864
+      address
+        h2 2814 Preston Lake Drive, Tucker, GA, 30084
+        h2 brent@brentrockwood.com
+        h2 +1 404 960 2864
 
     section.overview
-      h3 Overview
-      p I have been developing software professionally for two decades.  My primary areas of experience include modern web technologies and security.  I have been lucky to participate in and lead teams which have delivered on-time with high quality—release after release.
-
-      p I am currently available for contract and permanent positions.
+      p Full stack developer specializing in MEAN and Microsoft technologies.
 
     section.jobs
-      h3 Employment
+      h3 Recent Projects
 
       .job
-        h4 2001-Present
-        h4 Brent Rockwood Software
+        h4 Identity Management Connectors
 
-        p Notable recent projects include:
+        p.description Wrote custom code to synchronize user data between Dell One Identity Manager, Google Apps, and CA Service Desk.
 
-        h5 Identity Management Consultation for State Government
+        ul.tech
+          li VB.Net
+          li Google Apps SDK
+          li CA Service Desk SDK
 
-        p Installing and configuring Dell One Identity Manager as part of a large identity consolidation for a western state.
+      .job
+        h4 AngularJS Directives for Insurance Industry
 
-        h5 Front-End Development for Fortune 50 Insurance Company
+        p Developed AngularJS directives for use in a large underwriting application, interfacing with legacy Java REST services.
 
-        p Developing AngularJS directives for use in a large underwriting application, and interfacing with legacy Java REST services.
+        ul.tech
+          li AngularJS
+          li Gulp
 
-        h5 Web-based Election Reporting Application for Canadian City
+      .job
+        h4 Election Reporting Application
 
-        p From-scratch development of an app to report up-to-the minute results in municipal elections.  Front-end developed in AngularJS, back-end in .NET Web API.
+        p Led from-scratch development of an app to report up-to-the minute results in municipal elections.  Front-end developed in AngularJS, back-end in .NET Web API.
 
-        h5 Web-based Bitcoin Mining Marketplace
+        ul.tech
+          li C#
+          li ASP.Net WebApi
+          li AngularJS
 
-        p Worked on a startup team developing AngularJS front-ends, and NodeJs server components.  Much of the data layer was MongoDb and Redis.
+      .job
+        h4 Bitcoin Mining Marketplace
 
-        h5 Web-based Consumer-facing Storytelling App
+        p Back end development of a consumer-facing app to buy and sell cloud-based Bitcoin mining resources.
 
-        p Worked on a startup team developing AngularJS front-ends, NodeJS server components, with integration with third party telephony and scheduling services.
+        ul.tech
+          li NodeJS
+          li Express
+          li AngularJS
+          li MongoDb
+          li Redis
+          li MySQL
+
+      .job
+        h4 Consumer-facing Storytelling App
+
+        p Led a startup team developing AngularJS front-ends, NodeJS server components, with integration with third party telephony and scheduling services.
 
         p I instituted a Scrum-like process, with daily deployments to production.  All work was done remotely.  In addition to my development tasks, I managed all operational infrastructure, primarily in Amazon Web Services and Heroku.
 
+        ul.tech
+          li NodeJS
+          li CoffeeScript
+          li AngularJS
+          li MongoDB
+ 
       .job
-        h4 October/November 2012
-        h4 Identity Management Consultant
-        h4 Cenovus Energy/Encana
+        h4 Identity Management Connectors
 
-        p Working as a specialist on a large domain migration, I wrote custom software to integrate Quest One Identity Manager into the client's existing infrastructure.
+        p Working as a specialist on a large domain migration for a large oil company, I wrote custom software to integrate Quest One Identity Manager into the client's existing infrastructure.
+
+        ul.tech
+          li VB.Net
+          li SQL Server
+          li ADSI
 
       .job
-        h4 2004-2012
-        h4 Senior Developer
-        h4 Quest Software/Dell Software
+        h3 2004-2012
+        h3 Senior Developer
+        h3 Quest Software/Dell Software
 
         p I worked on the product teams for four products here.
 
-        h5 Quest One Identity Manager - Data Governance Edition
+        h4 Quest One Identity Manager - Data Governance Edition
 
         p This was a large, multi-server product designed to audit usage and classify protected unstructured data on remote NTFS shares and Sharepoint farms.  It involved interfacing with other large teams all over the world.  Written primarily in C#, portions of the code were written in C for performance—including a Windows kernel driver.
 
         p In addition to my daily development duties, I contributed heavily to a complex daily build process.
 
-        h5 Quest Collaboration Services
+        ul.tech
+          li C#
+          li C++
+          li MSBuild
+          li Windows Installer XML (WIX)
+          li Windows kernel development
+
+      .job
+        h4 Quest Collaboration Services
 
         p I took over this product as technical lead after a previous team had difficulty maintaining it at the required minimum service level.  The product was designed to synchronize contact and calendar data between Microsoft Exchange servers without any security changes or trusts required between the participating organizations.
 
@@ -74,11 +111,19 @@ html
 
         p Working with one other developer and two testers, we were able to release versions extending support for Exchange 2010, along with numerous bug-fix releases. In addition, we provided 24-7 support to all customers around the world.
 
-        h5 Quest Access Manager
+        ul.tech
+          li C++
+          li MAPI
+
+        h4 Quest Access Manager
 
         p I worked on this product team for one year. Access Manager was the predecessor to the Data Governance product listed above. Many of the components were reused by the later product. Access Manager did not contain the SharePoint or data classification components, and was a standalone product with a user interface built into Microsoft Management console (MMC).
 
-        h5 Quest Group Policy Manager
+        ul.tech
+          li C#
+          li MMC
+
+        h4 Quest Group Policy Manager
 
         p I worked on this product team for two years. Group Policy Manager was the predecessor to a product now known as Quest GPOAdmin. Starting from scratch, and with significant competition in the marketplace, we built it into the world's leading third-party Group Policy management tool. It was primarily a Group Policy version control tool, offering policy comparison, workflow, and deployment features. The team was comprised of four developers and one tester.
 
@@ -86,19 +131,32 @@ html
 
         p The user interface was presented as an MMC snap-in, with HTML used for reporting purposes.
 
+        ul.tech
+          li C#
+          li MMC
+          li ADSI
+          li Group Policy
+
       .job
-        h4 2003-2004
-        h4 Nicom
-        h4 Software Developer
+        h3 2003-2004
+        h3 Nicom
+        h3 Software Developer
 
         p Provided performance analysis and troubleshooting on a large web-based CRM system for a regional telecom provider. This work was primarily comprised of analyzing the threading code while in production and modifying DCOM settings to avoid thread starvation under heavy customer load. Code was written in VB.Net and stored in Visual SourceSafe.
 
+        ul.tech
+          li VB.Net
+          li ASP Classic
+
         p Subcontracted to a GIS software developer where I delivered a land-management/permitting application for a small city. Project had been troubled, with over three years history of non-delivery. Working alone, and starting largely from scratch, I was able to complete the project within three months. All code was written in a language proprietary to the client which I had never seen before. Tooling consisted of a text editor and StarTeam for source control.
 
+        ul.tech
+          li Custom language
+
       .job
-        h4 1999-2001
-        h4 Microforum
-        h4 Software Developer
+        h3 1999-2001
+        h3 Microforum
+        h3 Software Developer
 
         p Built two e-commerce sites using Microsoft Commerce Server.
 
@@ -106,10 +164,15 @@ html
 
         p Built proof-of-concept for RSS news aggregation product.
 
+        ul.tech
+          li VB6
+          li Microsoft Commerce Server
+          li SQL Server
+
       .job
-        h4 1997-1999
-        h4 Mount Sinai School of Medicine - New York City
-        h4 Systems Analyst
+        h3 1997-1999
+        h3 Mount Sinai School of Medicine - New York City
+        h3 Systems Analyst
 
         p Designed data collection protocols for national surgical and pharmaceutical trials sponsored by the National Institutes of Health and the US Food and Drug Administration.
 
@@ -119,101 +182,26 @@ html
 
         p Provided technical support services for the Department of Neurology.
 
+        ul.tech
+          li Visual Basic for Applications
+          li Microsoft Access
+          li VB6
+          li ASP Classic
+          li Oracle
+
       .job
-        h4 1990-1997
-        h4 Rockwood Electronics
-        h4 Junior Partner
+        h3 1990-1997
+        h3 Rockwood Electronics
+        h3 Junior Partner
 
         p Worked in all aspects of family business.
 
         p Built custom PC hardware and provided technical support to legal and medical research clients.
 
-    section.tech
-      h3 Major Technology Experience
+    h2 Education
 
-      h4 Languages
+    h3 Technical University of Nova Scotia
+    h3 Bachelor of Computer Engineering Program
+    h3 1993-1995
 
-      ul  
-        li C#
-        li C/C++
-        li JavaScript/CoffeeScript
-        li Ruby
-        li Python
-        li PowerShell
-        li Bash/sh
-        li VB/VB.Net/VBScript
-        li Windows Installer XML
-
-      h4 Web Frameworks and Technologies
-
-      ul
-        li HTML5
-        li jQuery
-        li Node.js
-        li Express
-        li Angular.js
-        li Windows Communications Foundation
-        li ASP/ASP.Net
-        li Bespoke IIS web servers
-        li Responsive design
-        li Unobtrusive JavaScript
-        li REST web services
-        li OAuth/OpenID/Facebook Connect
-        li GData/Google Maps
-        li Nginx
-        li PHP
-
-      h4 Databases and Data Layers
-
-      ul
-        li SQL Server
-        li Oracle
-        li MySQL
-        li SQLite
-        li PostgreSQL
-        li MongoDB
-        li CouchDB
-        li Redis
-
-      h4 Source Control
-
-      ul
-        li Git
-        li Team Foundation Server
-        li Subversion
-        li StarTeam
-        li SourceSafe
-
-      ul
-        li Gulp
-        li Grunt
-        li Team Build/MSBuild
-        li Make
-
-      ul
-        li Vows.js
-        li Jasmine
-        li Cucumber
-        li Rspec
-        li MSTest
-        li SpecFlow
-
-      h4 Additional API's
-
-      ul
-        li LDAP/ADSI
-        li COM/DCOM
-        li SharePoint
-        li MAPI
-
-      p ...and many more...
-
-    section.education
-
-      h3 Education
-
-      h4 Technical University of Nova Scotia
-      h4 Bachelor of Computer Engineering Program
-      h4 1993-1995
-
-      p I attended two years of this program before leaving to return to the work force.
+    p I attended two years of this program before leaving to return to the work force.
